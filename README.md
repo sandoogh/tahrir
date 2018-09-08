@@ -1,4 +1,4 @@
-# thecoci.me
+# https://bonyad.github.io/tahrir/
 
 This repo uses Mira
 
