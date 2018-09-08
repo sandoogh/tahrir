@@ -1,4 +1,4 @@
-# https://bonyad.github.io/tahrir/
+# bonyad.github.io/tahrir/
 
 This repo uses Mira
 
