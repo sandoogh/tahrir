@@ -1,0 +1,7 @@
+<script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>

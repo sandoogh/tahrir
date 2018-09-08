@@ -1,0 +1,20 @@
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    {{ IF PAGE.prev }}
+      <a class="extend prev" rel="prev" href="{{ PAGE.prev.url }}">
+        <i><-</i>
+        <span>{{ PAGE.prev.title }}</span>
+      </a>
+    {{ ELSE }}
+      <a></a>
+    {{- END }}
+    {{ IF PAGE.next }}
+      <a class="extend next" rel="next" href="{{ PAGE.next.url }}">
+        <i>-></i>
+        <span>{{ PAGE.next.title }}</span>
+      </a>
+    {{- END }}
+  </nav>
+</section>
+<!-- /Paging -->

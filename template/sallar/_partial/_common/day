@@ -1,0 +1,7 @@
+<date>
+  {{ IF SITE.language == 'Farsi' }}
+    {{ post.CALENDAR.jday | $FarsiNum }} {{ post.CALENDAR.jmonth_name }}
+  {{ ELSE }}
+    {{ post.CALENDAR.month_name }} {{ post.CALENDAR.day }}
+  {{ END }}
+</date>

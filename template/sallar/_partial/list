@@ -1,0 +1,21 @@
+<section class="container article-list">
+  {{ FOREACH post IN POSTS }}
+    {{ IF SITE.language == 'Farsi' && loop.prev().CALENDAR.jyear != post.CALENDAR.jyear }}
+      <h3>{{ post.CALENDAR.jyear | $FarsiNum }}</h3>
+    {{ ELSIF SITE.language == 'English' && loop.prev().CALENDAR.year != post.CALENDAR.year }}
+      <h3>{{ post.CALENDAR.year }}</h3>
+    {{ END }}
+    <article id="{{ post.slug }}" itemscope itemprop="blogPost">
+      <time>
+        {{ IF SITE.language == 'Farsi' }}
+          {{ post.CALENDAR.jday | $FarsiNum }}-{{ post.CALENDAR.jmonth | $FarsiNum }}
+        {{ ELSE }}
+          {{ post.CALENDAR.month_abbr }} {{ post.CALENDAR.day }}.
+        {{ END }}
+      </time>
+      <h4 itemprop="name">
+        <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
+      </h4>
+    </article>
+  {{ END }}
+</section>

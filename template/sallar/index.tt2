@@ -1,0 +1,10 @@
+{{ INCLUDE _partial/head 
+  TitleContent =  SITE.title
+  HeadDesc     =  SITE.description
+}}
+
+{{ INCLUDE _partial/header }}
+
+{{ INCLUDE _partial/list }}
+
+{{ INCLUDE _partial/footer }}

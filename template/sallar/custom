@@ -1,0 +1,13 @@
+{{ INCLUDE _partial/head 
+  TitleContent = post.title
+  HeadDesc = post.body.less
+}}
+
+{{ INCLUDE _partial/header }}
+
+{{ INCLUDE _partial/content
+  is_page = 'true'
+  is_more = 'true'
+}}
+
+{{ INCLUDE _partial/footer }}

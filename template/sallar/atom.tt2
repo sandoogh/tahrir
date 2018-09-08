@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ SITE.title }}</title>
+
+  <link href="{{ SITE.url }}/feed.xml" rel="self"/>
+  <link href="{{ SITE.url }}"/>
+
+  <updated>{{ BUILD.date | replace(' ', 'T')  }}{{ MAIN.timezone | remove(':') }}</updated>
+  <id>{{ SITE.url }}</id>
+  
+  <author>
+    <name>{{ SITE.author }}</name>
+  </author>
+    
+  <generator>Mira</generator>
+
+  {{ FOREACH post IN POSTS }}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ post.furl }}"/>
+    <id>{{ post.furl }}</id>
+
+    <published>{{ post.date | replace(' ', 'T') }}{{ MAIN.timezone | remove(':') }}</published>
+    <updated>{{ post.date | replace(' ', 'T')  }}{{ MAIN.timezone | remove(':') }}</updated>
+
+    <content type="html"><![CDATA[{{ post.body.more }}]]></content>
+
+    <summary>
+    {{ post.body.less | html }}
+    </summary>
+  </entry>
+  {{ END }}
+</feed>

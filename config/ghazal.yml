@@ -1,0 +1,19 @@
+title: غزل حافظ
+description: تفالی بر غزل حافظ
+author: bonyad
+language: Farsi
+
+url: https://bonyad.github.io/tahrir
+root: /tahrir
+
+icon: /static/theme/sallar/img/icon.svg
+
+default_extension: mmd
+
+permalink: ghazal/:title/
+
+post_sort: reverse
+
+template: sallar
+
+lists:
