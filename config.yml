@@ -4,19 +4,20 @@ description: تحریر شعر فارسی
 author: bonyad
 timezone: +03:30
 
-url: https://bonyad.github.io/tahrir
-root: /tahrir
+url: https://bonyad.github.io/tahrir/
+root: /tahrir/
+
+static: /tahrir/static/
 
 icon: /static/theme/sallar/img/icon.svg
 
 post_num: all
+archive_post_num: all
 feed_output: atom.xml
 
 default_floor: ghazal
 default_markup: mmd
 
 template: sallar
-
-lists:
 
 github: https://github.com/bonyad

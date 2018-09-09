@@ -5,6 +5,28 @@
 
 {{ INCLUDE _partial/header }}
 
-{{ INCLUDE _partial/list }}
+<section class="container article-list">
+<h3>دکمه فال را فشار دهید.</h3>
+
+<button onclick="getRandomInt(1, 496)">فال</button>
+</section>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = Math.random();
+}
+function getRandomArbitrary(min, max) {
+    document.getElementById("demo").innerHTML = Math.random() * (max - min) + min;
+}
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  var myNumber = Math.floor(Math.random() * (max - min)) + min;
+  var formattedNumber = ("000" + myNumber).substr(-3);
+  var address = "/tahrir/ghazal/" + formattedNumber + "/";
+
+  window.location.href = address;
+}
+</script>
 
 {{ INCLUDE _partial/footer }}

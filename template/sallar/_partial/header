@@ -7,7 +7,7 @@
       </h1>
       <ul>
         {{ IF SITE.language == 'Farsi' }}
-          <li><a href="{{ SITE.root }}">فهرست</a></li>
+          <li><a href="{{ SITE.root }}/list/غزلیات/">فهرست</a></li>
           <li><a href="{{ MAIN.github }}" target="_blank">گیت‌هاب</a></li>
         {{ ELSE }}
           <li><a href="{{ FLOORS.en.root }}">Index</a></li>
