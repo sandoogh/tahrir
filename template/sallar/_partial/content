@@ -13,9 +13,6 @@
 
     {{ INCLUDE _partial/_post/body }}
 
-    {{# IF is_post }}
-      {{# INCLUDE _partial/_post/comment }}
-    {{# END }}
   </article>
 {{ END }}
 </section>
