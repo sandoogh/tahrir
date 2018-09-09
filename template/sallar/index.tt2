@@ -8,17 +8,11 @@
 <section class="container article-list">
 <h3>دکمه فال را فشار دهید.</h3>
 
-<button onclick="getRandomInt(1, 496)">فال</button>
+<button onclick="getRandomaddr(1, 496)">فال</button>
 </section>
 
 <script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = Math.random();
-}
-function getRandomArbitrary(min, max) {
-    document.getElementById("demo").innerHTML = Math.random() * (max - min) + min;
-}
-function getRandomInt(min, max) {
+function getRandomaddr(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   var myNumber = Math.floor(Math.random() * (max - min)) + min;
