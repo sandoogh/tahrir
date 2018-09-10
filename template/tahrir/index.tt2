@@ -1,0 +1,72 @@
+{{ IF IS_POST }}
+	{{ this_page_title = "$TITLE | $PostTITLE" }}
+{{ ELSE }}
+	{{ this_page_title = PageTITLE }}
+{{ END }}
+<!DOCTYPE html>
+<html lang="{{ SITE.language }}">
+<head>
+  <title>{{ this_page_title }}</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="{{ SITE.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ TitleContent }}">
+  <meta property="og:url" content="{{ SITE.url }}">
+  <meta property="og:site_name" content="{{ SITE.title }}">
+  <meta property="og:description" content="{{ HeadDesc | html }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ TitleContent }}">
+  <meta name="twitter:description" content="{{ HeadDesc | html | truncate(50) }}">
+
+  <link rel="alternative" href="{{ SITE.root }}atom.xml" title="{{ TITLE }}" type="application/atom+xml">
+  <link rel="short icon" href="{{ SITE.icon }}">
+
+  <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/cover.css">
+
+</head>
+<body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">حافظ</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="#">خانه</a>
+            <a class="nav-link" href="#">غزلیات</a>
+            <a class="nav-link" href="#">درباره</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">اشعار حافظ</h1>
+        <p class="lead">جهت گرفتن فال، نیت کنید و بر روی دکمه فال ضربه بزنید</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary" onclick="getRandomaddr(1, 496)">فال حافظ</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>powered with 💜 by <a href="https://miraxy.github.io/">Mira</a></p>
+        </div>
+      </footer>
+    </div>
+
+
+    <script>
+      function getRandomaddr(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        var myNumber = Math.floor(Math.random() * (max - min)) + min;
+        var formattedNumber = ("000" + myNumber).substr(-3);
+        var address = "/tahrir/ghazal/" + formattedNumber + "/";
+        window.location.href = address;
+      }
+    </script>
+
+  </body>
+</body>

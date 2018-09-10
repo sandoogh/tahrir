@@ -18,6 +18,6 @@ feed_output: atom.xml
 default_floor: ghazal
 default_markup: mmd
 
-template: sallar
+template: tahrir
 
 github: https://github.com/bonyad
