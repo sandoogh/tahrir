@@ -34,8 +34,8 @@
         <div class="inner">
           <h3 class="masthead-brand">حافظ</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="#">خانه</a>
-            <a class="nav-link" href="#">غزلیات</a>
+            <a class="nav-link" href="{{ SITE.root }}">خانه</a>
+            <a class="nav-link" href="{{ SITE.root }}list/غزلیات/">غزلیات</a>
             <a class="nav-link" href="#">درباره</a>
           </nav>
         </div>
