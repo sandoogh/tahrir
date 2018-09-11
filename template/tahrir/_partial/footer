@@ -7,7 +7,7 @@
     <section class="container">
       <div class="delimiter">
         <a href="{{ MAIN.root }}" class="logo">
-          <img src="{{ MAIN.static }}/theme/sallar/img/icon.svg">
+          <img src="{{ MAIN.static }}/theme/tahrir/img/icon.svg">
         </a>
       </div>
       <p>
