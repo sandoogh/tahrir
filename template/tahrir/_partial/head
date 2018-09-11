@@ -22,7 +22,7 @@
 
   <link rel="alternative" href="{{ SITE.root }}atom.xml" title="{{ TITLE }}" type="application/atom+xml">
   <link rel="short icon" href="{{ SITE.icon }}">
-  <link rel="stylesheet" href="{{ MAIN.static }}/theme/sallar/css/style.css" type="text/css">
+  <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/style.css" type="text/css">
 
 </head>
 <body>
