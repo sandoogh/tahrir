@@ -44,7 +44,7 @@
     <nav class="indexes">
       <ul class="pagination justify-content-between">
         {{ FOREACH index IN INDEXES_ARCHIVE.sort('name') }}
-        <li class="page-item"><a class="page-link" href="{{ index.link }}">{{ index.name }}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ index.url }}">{{ index.name }}</a></li>
         {{ END }}
       </ul>
     </nav>
