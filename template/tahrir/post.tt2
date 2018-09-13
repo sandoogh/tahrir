@@ -1,18 +1,108 @@
+{{ IF IS_POST }}
+	{{ this_page_title = "$TITLE | $PostTITLE" }}
+{{ ELSE }}
+	{{ this_page_title = PageTITLE }}
+{{ END }}
+<!DOCTYPE html>
+<html lang="{{ SITE.language }}">
+<head>
+  <title>{{ this_page_title }}</title>
 
-{{ INCLUDE _partial/head 
-  TitleContent = post.title
-  HeadDesc = post.body.less
-}}
+  <meta charset="utf-8">
+  <meta name="description" content="{{ SITE.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ TitleContent }}">
+  <meta property="og:url" content="{{ SITE.url }}">
+  <meta property="og:site_name" content="{{ SITE.title }}">
+  <meta property="og:description" content="{{ HeadDesc | html }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ TitleContent }}">
+  <meta name="twitter:description" content="{{ HeadDesc | html | truncate(50) }}">
 
-{{ INCLUDE _partial/header }}
+  <link rel="alternative" href="{{ SITE.root }}atom.xml" title="{{ TITLE }}" type="application/atom+xml">
+  <link rel="short icon" href="{{ SITE.icon }}">
 
-{{ INCLUDE _partial/content
-  is_post = 'true'
-  is_more = 'true'
-}}
+  <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/cover.css">
 
-{{ INCLUDE _partial/paging
-  is_post = 'true'
-}}
+</head>
+<body class="text-center">
 
-{{ INCLUDE _partial/footer }}
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead">
+      <div class="inner">
+        <h3 class="masthead-brand">حافظ</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="{{ SITE.root }}">خانه</a>
+          <a class="nav-link" href="{{ SITE.root }}list/غزلیات/">غزلیات</a>
+          <a class="nav-link" href="#">درباره</a>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+      <section id="content">
+          {{ FOREACH post IN POSTS }}
+          <article id="{{ post.slug }}" class="article article-type-poem" itemscope itemprop="ghazal">
+            <h2 class="title" itemprop="name">{{ post.title }}</h2>
+          
+            <section class="content">
+              <div class="row poem">
+              {{ FOREACH line IN post.mesra }}
+                <div class="mesra {{ loop.parity }} col-sm-12 col-md-6 text-right">
+                  {{ line }}
+                </div>
+              {{ END }}
+              </div>
+                {{ post.body.more }}
+            </section>
+          
+          </article>
+          {{ END }}
+      </section>
+    </main>
+
+    <section class="page-nav">
+      <div class="row">
+        <div class="col-6 text-right">
+        {{ IF PAGE.prev }}
+          <a rel="prev" href="{{ PAGE.prev.url }}">
+            <i><-</i>
+            <span>{{ PAGE.prev.title }}</span>
+          </a>
+        {{- END }}
+        </div>
+        <div class="col-6 text-left">
+        {{ IF PAGE.next }}
+          <a class="col-6 text-left" rel="next" href="{{ PAGE.next.url }}">
+            <span>{{ PAGE.next.title }}</span>
+            <i>-></i>
+          </a>
+        {{- END }}
+        </div>
+      </div>
+      </nav>
+    </section>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>powered with ♥ by <a href="https://miraxy.github.io/">Mira</a></p>
+      </div>
+    </footer>
+  </div>
+
+
+    <script>
+      function getRandomaddr(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        var myNumber = Math.floor(Math.random() * (max - min)) + min;
+        var formattedNumber = ("000" + myNumber).substr(-3);
+        var address = "/tahrir/ghazal/" + formattedNumber + "/";
+        window.location.href = address;
+      }
+    </script>
+
+  </body>
+</body>
