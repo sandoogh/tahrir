@@ -154,6 +154,8 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .nav-masthead .nav-link {
