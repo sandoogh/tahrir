@@ -3,6 +3,7 @@
 {{ ELSE }}
 	{{ this_page_title = PageTITLE }}
 {{ END }}
+
 <!DOCTYPE html>
 <html lang="{{ SITE.language }}">
 <head>
@@ -23,8 +24,22 @@
   <link rel="alternative" href="{{ SITE.root }}atom.xml" title="{{ TITLE }}" type="application/atom+xml">
   <link rel="short icon" href="{{ SITE.icon }}">
 
+  <!-- for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="{{ SITE.icon }}">
+  <!-- for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="{{ SITE.icon }}">
+
+
   <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="{{ MAIN.static }}/theme/tahrir/css/cover.css">
+
+  <script>
+    window.addEventListener("load", function() { window. scrollTo(0, 0); });
+    document.addEventListener("touchmove", function(e) { e.preventDefault() });
+  </script>
 
 </head>
 <body class="text-center">
