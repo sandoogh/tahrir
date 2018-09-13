@@ -6,8 +6,6 @@ language: Farsi
 url: https://bonyad.github.io/tahrir/
 root: /tahrir/
 
-icon: /static/theme/sallar/img/icon.svg
-
 default_extension: md
 
 permalink: ghazal/:title/
