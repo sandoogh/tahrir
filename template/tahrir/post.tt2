@@ -50,7 +50,7 @@
             <section class="content">
               <div class="row poem">
               {{ FOREACH line IN post.mesra }}
-                <div class="mesra {{ loop.parity }} col-sm-12 col-md-6 text-right">
+                <div class="mesra {{ loop.parity }} col-sm-12 col-md-6">
                   {{ line }}
                 </div>
               {{ END }}
