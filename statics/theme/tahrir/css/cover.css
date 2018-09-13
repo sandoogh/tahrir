@@ -35,6 +35,15 @@ html[lang=Farsi] .cover-container {
 	direction:rtl;
 }
 
+.indexes {
+  margin-top: 2rem;
+  border-bottom: 2px solid #5cb3b6;
+}
+.archname {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
 .ghazal-list {
   padding-top: 1rem;
 }
@@ -48,21 +57,14 @@ html[lang=Farsi] .cover-container {
 .ghazal-list a:after {
 	content:" - "
 }
-.indexes {
-  margin-top: 2rem;
-}
 ul.pagination {
-  display: -webkit-flex; /* Safari */
-  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-  display: flex;  
-  flex-wrap: wrap;
   margin-right: 0;
   padding-right: 0;
 }
 .page-link {
   color: #5cb3b6;
   border: 0;
-  padding: .5rem .20rem;
+  padding: .1rem .20rem;
 }
 
 /*
@@ -107,7 +109,6 @@ body {
 .cover-container {
   max-width: 42em;
 }
-
 
 /*
  * Header

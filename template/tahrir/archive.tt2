@@ -30,7 +30,7 @@
 <body class="text-center">
 
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
+    <header class="masthead">
       <div class="inner">
         <h3 class="masthead-brand">حافظ</h3>
         <nav class="nav nav-masthead justify-content-center">
@@ -42,12 +42,16 @@
     </header>
 
     <nav class="indexes">
-      <ul class="pagination justify-content-between">
+      <ul class="pagination justify-content-between flex-wrap">
         {{ FOREACH index IN INDEXES_ARCHIVE.sort('name') }}
         <li class="page-item"><a class="page-link" href="{{ index.url }}">{{ index.name }}</a></li>
         {{ END }}
       </ul>
     </nav>
+    
+    <div class="archname">
+      {{ ARCH.name UNLESS ARCH.name.match('\w{2,}') }}
+    </div>
 
     <main role="main" class="inner cover">
       <section class="ghazal-list text-right">
