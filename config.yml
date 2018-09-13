@@ -9,7 +9,7 @@ root: /tahrir/
 
 static: /tahrir/static/
 
-icon: /static/theme/tahrir/img/icon.svg
+icon: /static/theme/tahrir/img/icon.png
 
 post_num: all
 archive_post_num: all
