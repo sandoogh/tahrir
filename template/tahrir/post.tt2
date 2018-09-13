@@ -1,12 +1,7 @@
-{{ IF IS_POST }}
-	{{ this_page_title = "$TITLE | $PostTITLE" }}
-{{ ELSE }}
-	{{ this_page_title = PageTITLE }}
-{{ END }}
 <!DOCTYPE html>
 <html lang="{{ SITE.language }}">
 <head>
-  <title>{{ this_page_title }}</title>
+  <title>{{ PageTITLE }}</title>
 
   <meta charset="utf-8">
   <meta name="description" content="{{ SITE.description }}">
