@@ -32,7 +32,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">حافظ</h3>
+          <h3 class="masthead-brand">تحریر</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link" href="{{ SITE.root }}">خانه</a>
             <a class="nav-link" href="{{ SITE.root }}list/غزلیات/">غزلیات</a>
@@ -42,10 +42,10 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">اشعار حافظ</h1>
+        <h1 class="cover-heading">فال حافظ</h1>
         <p class="lead">جهت گرفتن فال، نیت کنید و بر روی دکمه فال ضربه بزنید</p>
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary" onclick="getRandomaddr(1, 496)">فال حافظ</a>
+          <a href="#" class="btn btn-lg btn-secondary" onclick="getRandomaddr(1, 496)">گرفتن فال</a>
         </p>
       </main>
 

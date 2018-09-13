@@ -32,7 +32,7 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead">
       <div class="inner">
-        <h3 class="masthead-brand">حافظ</h3>
+        <h3 class="masthead-brand">تحریر</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link" href="{{ SITE.root }}">خانه</a>
           <a class="nav-link" href="{{ SITE.root }}list/غزلیات/">غزلیات</a>
