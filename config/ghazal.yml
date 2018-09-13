@@ -6,6 +6,8 @@ language: Farsi
 url: https://bonyad.github.io/tahrir/
 root: /tahrir/
 
+manifest: /tahrir/manifest.webmanifest
+
 default_extension: md
 
 permalink: ghazal/:title/
