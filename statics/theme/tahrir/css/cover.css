@@ -40,16 +40,15 @@ body,html{
 }
 
 @media (min-width:768px) {
+  .mesra {
+    font-size: 18px;
+  }
   .mesra.even {
     text-align: right;
   }
   .mesra.odd {
     text-align: left;
   }
-}
-
-.mesra {
-  font-size: 18px;
 }
 
 html[lang=Farsi] body,html[lang=Farsi] html{
