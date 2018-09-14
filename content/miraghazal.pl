@@ -24,8 +24,16 @@ foreach my $num ( keys %$ghazal ) {
     my $title = "غزل شماره $num";
     $title =~ tr/0123456789/۰۱۲۳۴۵۶۷۸۹/;
     my $first_mesra = @{ $ghazal->{$num} }[0];
-    my $last_char = substr $first_mesra, -1;
-    $last_char = substr $first_mesra, -2 if $last_char !~ /\w/;
+    
+    my $last_char;
+    if ($first_mesra =~ /(\w)\W*$/) {
+    $last_char = $1;
+    }
+    
+    #my $last_char = substr $first_mesra, -1;
+    #if ($last_char !~ /[ا-ی]/) {
+    #	$last_char = substr $first_mesra, -2;
+    #}
 #    $first_mesra =~ /(\w+)\s*$/;
 #    my $last_word = $1;
 
