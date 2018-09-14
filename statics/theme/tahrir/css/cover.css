@@ -48,6 +48,10 @@ body,html{
   }
 }
 
+.mesra {
+  font-size: 18px;
+}
+
 html[lang=Farsi] body,html[lang=Farsi] html{
 	font-family:Sahel;
 }
@@ -151,7 +155,7 @@ body {
 }
 
 .cover-container {
-  max-width: 44em;
+  max-width: 48em;
 }
 
 /*
