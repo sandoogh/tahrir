@@ -34,7 +34,7 @@
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link" href="{{ SITE.root }}">خانه</a>
           <a class="nav-link" href="{{ SITE.root }}list/غزلیات/">غزلیات</a>
-          <a class="nav-link" href="#">درباره</a>
+          <a class="nav-link" href="/about/">درباره</a>
         </nav>
       </div>
     </header>
