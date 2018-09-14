@@ -25,7 +25,7 @@ foreach my $num ( keys %$ghazal ) {
     $title =~ tr/0123456789/۰۱۲۳۴۵۶۷۸۹/;
     my $first_mesra = @{ $ghazal->{$num} }[0];
     my $last_char = substr $first_mesra, -1;
-    my $last_char !~ m/\w/;
+    $last_char = substr $first_mesra, -2 if $last_char !~ /\w/;
 #    $first_mesra =~ /(\w+)\s*$/;
 #    my $last_word = $1;
 
@@ -39,6 +39,7 @@ foreach my $num ( keys %$ghazal ) {
     print $fh "mesra:\n";
 
     foreach my $mesra ( @{ $ghazal->{$num} } ) {
+    	$mesra =~ s/^\s*|\s*$//;
         print $fh "  - $mesra\n";
     }
 

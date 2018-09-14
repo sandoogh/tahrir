@@ -21,5 +21,3 @@ mira build
 mira view
 ```
 
-#### template:
-[sallar.me](https://github.com/sallar/sallar.me/)
