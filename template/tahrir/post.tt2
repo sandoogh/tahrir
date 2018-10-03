@@ -89,6 +89,7 @@
                 <hr>
 
                 {{ IF post.arabi }}
+                <h4>ابیات عربی</h4>
                 {{ FOREACH arabi IN post.arabi }}
                   <b>{{ arabi.key }}: </b>{{ arabi.value }}<br>
                 {{ END }}
