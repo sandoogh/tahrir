@@ -99,8 +99,7 @@
                 {{ IF post.mani }}
                 <h4>معنی ابیات</h4>
                 {{ FOREACH mani IN post.mani.keys.nsort }}
-                <b>{{ mani | $FarsiNum }}: </b>{{ post.mani.$mani }}<br>
-<!--                  <b>{{ mani.key | $FarsiNum }}: </b>{{ mani.value }}<br> -->
+                <b>{{ mani | $FarsiNum }}- </b>{{ post.mani.$mani }}<br>
                 {{ END }}
                 <hr>
                 {{ END }}
