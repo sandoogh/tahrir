@@ -23,7 +23,7 @@ body,html{
 	-moz-osx-font-smoothing:grayscale;
 	text-rendering:optimizelegibility
 }
-@media (max-width:768px){
+@media (max-width:768px) {
 	body,html{
 		font-size:14px
   }
@@ -46,6 +46,11 @@ body,html{
   .mesra.odd {
     text-align: left;
   }
+}
+
+blockquote {
+    padding-right: 15px;
+    border-right: 5px solid #dedede;
 }
 
 html[lang=Farsi] body,html[lang=Farsi] html{
