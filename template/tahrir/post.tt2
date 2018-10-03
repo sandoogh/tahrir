@@ -60,7 +60,7 @@
                 <hr>
 
                 {{ IF post.tazmin }}
-                <h5>تضمین</h5>
+                <h4>تضمین</h4>
                 {{ FOREACH tazmin IN post.tazmin }}
                   <b>{{ tazmin.key }}: </b>{{ tazmin.value }}<br>
                 {{ END }}
@@ -68,7 +68,7 @@
                 {{ END }}
 
                 {{ IF post.esteghbal }}
-                <h5>استقبال</h5>
+                <h4>استقبال</h4>
                 {{ FOREACH esteghbal IN post.esteghbal }}
                   <b>{{ esteghbal.key }}: </b>{{ esteghbal.value }}<br>
                 {{ END }}
@@ -76,7 +76,7 @@
                 {{ END }}
 
                 {{ IF post.talmih }}
-                <h5>تلمیح</h5>
+                <h4>تلمیح</h4>
                 {{ FOREACH talmih IN post.talmih }}
                   <b>{{ talmih.key }}: </b>{{ talmih.value }}<br>
                 {{ END }}
@@ -97,7 +97,7 @@
                 {{ END }}
 
                 {{ IF post.mani }}
-                <h5>معنی ابیات</h5>
+                <h4>معنی ابیات</h4>
                 {{ FOREACH mani IN post.mani.keys.nsort }}
                 <b>{{ mani | $FarsiNum }}: </b>{{ post.mani.$mani }}<br>
 <!--                  <b>{{ mani.key | $FarsiNum }}: </b>{{ mani.value }}<br> -->
