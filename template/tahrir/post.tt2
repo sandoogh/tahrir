@@ -54,6 +54,61 @@
               {{ END }}
               </div>
               <div class="int-body">
+                <b>وزن: </b>{{ post.vazn }}
+                <br>
+                <b>بحر: </b>{{ post.bahr }}
+                <hr>
+
+                {{ IF post.tazmin }}
+                <h5>تضمین</h5>
+                {{ FOREACH tazmin IN post.tazmin }}
+                  <b>{{ tazmin.key }}: </b>{{ tazmin.value }}<br>
+                {{ END }}
+                <hr>
+                {{ END }}
+
+                {{ IF post.esteghbal }}
+                <h5>استقبال</h5>
+                {{ FOREACH esteghbal IN post.esteghbal }}
+                  <b>{{ esteghbal.key }}: </b>{{ esteghbal.value }}<br>
+                {{ END }}
+                <hr>
+                {{ END }}
+
+                {{ IF post.talmih }}
+                <h5>تلمیح</h5>
+                {{ FOREACH talmih IN post.talmih }}
+                  <b>{{ talmih.key }}: </b>{{ talmih.value }}<br>
+                {{ END }}
+                <hr>
+                {{ END }}
+
+                {{ FOREACH kalame IN post.kalamat }}
+                  <b>{{ kalame.items.0 }}: </b>{{ kalame.items.1 }}<br>
+                {{ END }}
+                <hr>
+
+                {{ IF post.arabi }}
+                {{ FOREACH arabi IN post.arabi }}
+                  <b>{{ arabi.key }}: </b>{{ arabi.value }}<br>
+                {{ END }}
+                <hr>
+                {{ END }}
+
+                {{ IF post.mani }}
+                <h5>معنی ابیات</h5>
+                {{ FOREACH mani IN post.mani.keys.nsort }}
+                <b>{{ mani | $FarsiNum }}: </b>{{ post.mani.$mani }}<br>
+<!--                  <b>{{ mani.key | $FarsiNum }}: </b>{{ mani.value }}<br> -->
+                {{ END }}
+                <hr>
+                {{ END }}
+
+                {{ IF post.analyze.kelid }}
+                {{ post.analyze.kelid IF post.analyze.kelid }}
+                <hr>
+                {{ END }}
+
                 {{ post.body.more }}
               </div>
             </section>
